@@ -1,0 +1,558 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Blog - Live Beats WebRadio Player</title> <link rel="stylesheet" href="css/style.css"> <link rel="icon" type="image/png" href="img/icon.png"> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> </head> <body> <header> <div class="container"> <div class="logo"> <img src="img/icon.png" alt="Live Beats WebRadio Player Logo"> <h1>Live Beats WebRadio Player</h1> </div> <nav> <ul> <li><a href="index.html">Home</a></li> <li><a href="features.html">Features</a></li> <li><a href="download.html">Download</a></li> <li><a href="blog.html" class="active">Blog</a></li> <li><a href="contact.html">Contact</a></li> </ul> </nav> </div> </header>
+<section class="page-header">
+    <div class="container">
+        <h1>Live Beats Blog</h1>
+        <p>Updates, tips, and news about internet radio and our player</p>
+    </div>
+</section>
+
+<section class="blog-content">
+    <div class="container">
+        <article id="post1" class="blog-post">
+            <h2>Version 0.3.8.5 Released: Enhanced Database Performance & Stability</h2>
+            <div class="blog-meta">
+                <div class="date">April 14, 2025</div>
+                <div class="tag">Update</div>
+            </div>
+          
+            <p>Today we're excited to announce the release of Live Beats WebRadio Player version 0.3.8.5! This update enhances database performance and application stability to provide an even smoother radio listening experience.</p>
+            
+            <h3>Key Improvements in Version 0.3.8.5</h3>
+            <ul>
+                <li><strong>Write-Ahead Logging (WAL):</strong> We've implemented this technical database enhancement that significantly improves performance during all database operations. This means faster access to your stations and smoother recording of your listening statistics.</li>
+                <li><strong>Database Maintenance Tool:</strong> Added a new button in the LB Database manager that maintains and optimizes your database, particularly helpful for users with extensive listening histories.</li>
+                <li><strong>Improved Statistics Display:</strong> Changed the database query timeframe to show the current week (including today plus the previous 6 days) rather than just "last week," giving you more relevant insights into your recent listening patterns.</li>
+                <li><strong>Better Database Import Experience:</strong> Added a helpful recommendation to restart the application after importing a database to ensure all data loads properly.</li>
+                <li><strong>Enhanced Stability:</strong> Added more comprehensive exception handling throughout the application for improved reliability during network fluctuations.</li>
+            </ul>
+            
+            <p>To update to the latest version, simply restart your application or download it from our <a href="download.html">download page</a>.</p>
+        </article>
+
+        <article id="post2" class="blog-post">
+            <h2>Theme System Overhaul in Version 0.3.8.0</h2>
+            <div class="blog-meta">
+                <div class="date">April 13, 2025</div>
+                <div class="tag">Feature</div>
+            </div>
+           
+            <p>Yesterday we released version 0.3.8.0, featuring a complete overhaul of our theme system. The update introduces full integration of all theme functions with the LB database, providing a more cohesive and reliable visual experience.</p>
+            
+            <h3>What's New with Themes</h3>
+            <ul>
+                <li><strong>Database Integration:</strong> All theme functions are now handled by the LB database, ensuring consistent appearance across all windows and forms.</li>
+                <li><strong>14 Additional Themes:</strong> We've added a collection of pre-designed themes ranging from professional dark modes to vibrant color schemes, giving you plenty of options without needing to create themes from scratch.</li>
+                <li><strong>Better Performance:</strong> Theme loading and switching is now faster and more efficient thanks to the database integration.</li>
+            </ul>
+            
+            <p>We've also fixed a website button theme issue in version 0.3.8.2, ensuring the default theme applies properly to all elements.</p>
+            
+            <p>To explore these new themes, click the "Theme" button in the left panel of the main interface.</p>
+        </article>
+
+        <article id="post3" class="blog-post">
+            <h2>Critical Streaming Improvements in Version 0.3.7.0</h2>
+            <div class="blog-meta">
+                <div class="date">April 12, 2025</div>
+                <div class="tag">Technical</div>
+            </div>
+
+            <p>We've made significant technical improvements to the core streaming and metadata systems in version 0.3.7.0, released on April 12, 2025. These changes enhance reliability and performance, especially during long listening sessions.</p>
+            
+            <h3>Technical Improvements</h3>
+            <ul>
+                <li><strong>Enhanced Metadata Fetching:</strong> Fixed critical issues in how we handle asynchronous operations during error scenarios, preventing UI freezes and improving reliability.</li>
+                <li><strong>Better Connection Stability:</strong> Streaming connections now recover more gracefully from network interruptions with improved error recovery mechanisms.</li>
+                <li><strong>Resource Management:</strong> Implemented more robust disposal of system resources and better memory management to prevent leaks during extended use.</li>
+                <li><strong>Reduced CPU Usage:</strong> Optimized metadata polling with improved retry mechanisms that consume fewer system resources.</li>
+                <li><strong>Code Structure Improvements:</strong> Restructured async code flow to prevent potential deadlocks during metadata retrieval, a common cause of application hangs in previous versions.</li>
+            </ul>
+            
+            <p>While most of these changes happen behind the scenes, you'll notice faster connections to stations, more reliable song information display, and better overall performance, especially when using multiple features simultaneously.</p>
+        </article>
+
+        <article id="post4" class="blog-post">
+            <h2>Database Search and Usability Improvements in Version 0.3.6.0</h2>
+            <div class="blog-meta">
+                <div class="date">April 11, 2025</div>
+                <div class="tag">Feature</div>
+            </div>
+     
+            <p>Version 0.3.6.0 brings several enhancements to our LB Database functionality, making it easier to find and manage your stations while tracking usage data more comprehensively.</p>
+            
+            <h3>Database Enhancements</h3>
+            <ul>
+                <li><strong>Station Search:</strong> Added the ability to search for stations directly within the database, making it easier to find favorites in large collections.</li>
+                <li><strong>Comprehensive Data Tracking:</strong> Non-favorite stations now track data usage too, giving you complete visibility into your listening habits.</li>
+                <li><strong>Smart Data Management:</strong> Deleting a station from favorites will automatically add its data usage to "Non-favorites data usage" to maintain accurate statistics.</li>
+                <li><strong>Visual Improvements:</strong> "Non-favorites data usage" now displays in light green color for easier identification, and the UI has received several small adjustments for better usability.</li>
+                <li><strong>Focused Statistics:</strong> When viewing usage statistics for specific dates, only stations that were actually played during that period will be shown, reducing clutter.</li>
+            </ul>
+            
+            <p>We've also added a confirmation message when enabling or disabling statistics tracking to prevent accidental changes that might affect your usage data (version 0.3.6.2).</p>
+            
+            <h3>Theme Designer Additions</h3>
+            <p>For theme customization enthusiasts, we've added two new buttons in the theme designer:</p>
+            <ul>
+                <li><strong>Randomize All Colors:</strong> Generate a completely random theme with one click</li>
+                <li><strong>Randomize Selected Elements:</strong> Only randomize specific aspects of your theme</li>
+            </ul>
+        </article>
+
+        <article id="post5" class="blog-post">
+            <h2>Visual Experience Upgrade in Version 0.3.5.0</h2>
+            <div class="blog-meta">
+                <div class="date">April 9, 2025</div>
+                <div class="tag">Enhancement</div>
+            </div>
+          
+            <p>We've enhanced the visual experience in version 0.3.5.0 with two significant improvements:</p>
+            
+            <h3>Theme Consistency</h3>
+            <p>Themes will now apply to all forms and windows throughout the application. Previously, some dialogs and panels might not have fully adopted your selected theme, creating visual inconsistency. Now your chosen theme will be applied everywhere for a cohesive experience.</p>
+            
+            <h3>Smooth Transitions</h3>
+            <p>All forms now have a fade-in effect for a more polished and professional feel. Rather than windows appearing instantly, they'll smoothly transition into view, reducing visual jarring when opening new panels or dialogs.</p>
+            
+            <p>These subtle but important visual improvements contribute to a more refined and professional application experience.</p>
+        </article>
+
+        <article id="post6" class="blog-post">
+            <h2>User Experience Improvements in Version 0.3.4.0</h2>
+            <div class="blog-meta">
+                <div class="date">April 8, 2025</div>
+                <div class="tag">Feature</div>
+            </div>
+            
+            <p>Version 0.3.4.0 brings several quality-of-life improvements to enhance your daily interaction with Live Beats WebRadio Player:</p>
+            
+            <h3>Key Improvements</h3>
+            <ul>
+                <li><strong>Updated Manual:</strong> The LB Manual (accessible via the book button in settings) has been updated to cover all features in this version.</li>
+                <li><strong>Sortable Search Results:</strong> Radio Browser search results can now be sorted by various criteria like popularity, bitrate, or name.</li>
+                <li><strong>Quick Station Access:</strong> Double-clicking an entry in the database will instantly start playing that station.</li>
+                <li><strong>Better Text Display:</strong> Added scrolling for song and station names when they don't fit in their designated space.</li>
+                <li><strong>GitHub Integration:</strong> Added a link to visit our project on GitHub (accessible via the icon at the bottom of the interface).</li>
+                <li><strong>Play Count Tracking:</strong> Play count will now only be stored in all-time totals for more accurate statistics.</li>
+            </ul>
+            
+            <p>We've also updated the WebView2 component to the latest build for improved web content rendering performance.</p>
+        </article>
+
+        <article id="post7" class="blog-post">
+            <h2>Database Integration and Theme Designer Upgrade in Version 0.3.3.0</h2>
+            <div class="blog-meta">
+                <div class="date">April 7, 2025</div>
+                <div class="tag">Major Update</div>
+            </div>
+
+            <p>Version 0.3.3.0 represents a significant milestone with the introduction of our comprehensive database system for tracking statistics and managing favorites.</p>
+            
+            <h3>The LB Database</h3>
+            <p>We've implemented a sophisticated database that tracks and manages:</p>
+            <ul>
+                <li><strong>Play Time:</strong> Detailed tracking of how long you've listened to each station</li>
+                <li><strong>Play Count:</strong> How many times you've connected to each station</li>
+                <li><strong>Data Usage:</strong> Estimates of how much bandwidth each station has consumed</li>
+                <li><strong>Favorites Management:</strong> Improved organization of your favorite stations</li>
+            </ul>
+            <p>This feature is entirely optional and can be disabled if you prefer not to track your listening statistics.</p>
+            
+            <h3>Theme Designer Overhaul</h3>
+            <p>We've completely reworked the theme designer UI with:</p>
+            <ul>
+                <li><strong>Intuitive Layout:</strong> More logical organization of color selection options</li>
+                <li><strong>Color Picker:</strong> Added a precise color selection tool for fine-tuning your themes</li>
+                <li><strong>Better Preview:</strong> Improved visual feedback when designing themes</li>
+            </ul>
+            
+            <p>We've also improved memory management and resource cleanup throughout the application, and in version 0.3.3.1, we've added proper error dialogs that will show Windows crash information if an unexpected error occurs.</p>
+        </article>
+
+        <article id="post8" class="blog-post">
+            <h2>LB Manual and Performance Improvements in Version 0.3.2.0</h2>
+            <div class="blog-meta">
+                <div class="date">April 1, 2025</div>
+                <div class="tag">Update</div>
+            </div>
+           
+            <p>Version 0.3.2.0 introduces a comprehensive user manual and performance optimizations to enhance your experience:</p>
+            
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>LB Player Manual:</strong> Added a complete guide accessible by clicking the book button in the settings panel. The manual covers all features and provides helpful tips for getting the most out of the application.</li>
+                <li><strong>Faster Radio Browser:</strong> Optimized the Radio Browser by delaying country data loading until advanced search is activated, significantly speeding up the initial browser load time.</li>
+                <li><strong>Enhanced User Interface:</strong> Added icons to buttons throughout the application for better visual recognition.</li>
+            </ul>
+            
+            <p>We've also made several backend improvements in version 0.3.2.3:</p>
+            <ul>
+                <li>Tweaked the radio browser to work better on slower computers</li>
+                <li>Improved handling of unsupported stream formats with more graceful rejection</li>
+                <li>Fixed issues with the guide not loading properly</li>
+            </ul>
+        </article>
+
+        <article id="post9" class="blog-post">
+            <h2>UI Refinements and SoulSeek Integration in Version 0.3.1.0</h2>
+            <div class="blog-meta">
+                <div class="date">March 30, 2025</div>
+                <div class="tag">Update</div>
+            </div>
+            
+            <p>Versions 0.3.1.0 through 0.3.1.4 introduce several interface improvements and integrated features for SoulSeek users:</p>
+            
+            <h3>Memory and Performance</h3>
+            <p>Version 0.3.1.0 greatly improves memory handling, making the application more efficient during extended use. We've also implemented a registration system with certain features reserved for registered users:</p>
+            <ul>
+                <li>Copy song info to clipboard</li>
+                <li>Copy song info to file</li>
+                <li>SoulSeek download functionality</li>
+                <li>Create playlist function</li>
+                <li>Expanded favorites (limited to 10 for unregistered users)</li>
+                <li>Station monitoring (limited to 4 stations for unregistered users)</li>
+            </ul>
+            
+            <h3>SoulSeek Enhancements</h3>
+            <p>Version 0.3.1.4 adds the ability to enforce desired bit rates in SoulSeek searches, improving music download quality consistency. We've also improved the SoulSeek UI with helpful guidance text.</p>
+            
+            <h3>Visual Consistency</h3>
+            <ul>
+                <li>Fixed HTTP and HTTPS icons to display properly with theme colors</li>
+                <li>Made the settings panel follow button text color from the left panel</li>
+                <li>Improved volume label visibility across different themes</li>
+                <li>Enhanced "Save Monitor" text visibility</li>
+                <li>Added hover effect for monitored station close buttons</li>
+            </ul>
+        </article>
+
+        <article id="post10" class="blog-post">
+            <h2>SoulSeek Integration and Theme Consistency in Version 0.3.0.0</h2>
+            <div class="blog-meta">
+                <div class="date">March 29, 2025</div>
+                <div class="tag">Major Feature</div>
+            </div>
+
+            <p>Version 0.3.0.0 introduces powerful integration with SoulSeek for music discovery and acquisition:</p>
+            
+            <h3>SoulSeek Batch Download</h3>
+            <p>We've implemented a function to generate saved song lists in a format compatible with batchdl for bulk downloading via SoulSeek. This feature requires:</p>
+            <ul>
+                <li>slsk-batchdl utility</li>
+                <li>dotnet runtime-6.0.36</li>
+            </ul>
+            <p>This integration allows you to easily discover music on radio stations and then find high-quality versions through SoulSeek's peer-to-peer network.</p>
+            
+            <h3>UI Improvements</h3>
+            <ul>
+                <li><strong>Default Theme Consistency:</strong> Improved visual coherence across different forms when using the Default theme</li>
+                <li><strong>Direct Volume Control:</strong> Volume control now adjusts directly where you click, rather than requiring incremental adjustments</li>
+                <li><strong>Station Monitor Usability:</strong> Disabled mouse scrolling for the Station Monitor dropdown to prevent accidental changes</li>
+            </ul>
+        </article>
+
+        <article id="post11" class="blog-post">
+            <h2>Station Monitoring and Search Improvements in Version 0.2.9.0</h2>
+            <div class="blog-meta">
+                <div class="date">March 27, 2025</div>
+                <div class="tag">Feature</div>
+            </div>
+
+            <p>Version 0.2.9.0 focuses on enhancing the station monitoring experience and improving search performance:</p>
+            
+            <h3>Dynamic Station Monitoring</h3>
+            <p>The Station Monitor combobox now refreshes automatically when adding or removing favorites, eliminating the need to manually reload the list. This makes keeping track of multiple stations more seamless and intuitive.</p>
+            
+            <h3>Faster Station Search</h3>
+            <p>Searching for radio stations is now significantly faster thanks to optimizations that automatically select the fastest API server. This improvement reduces waiting times when looking for new stations to enjoy.</p>
+            
+            <p>Version 0.2.9.1 also fixes a bug where the advanced search checkbox would remain checked when reopening the radio browser despite missing controls, improving the search interface consistency.</p>
+        </article>
+
+        <article id="post12" class="blog-post">
+            <h2>Theme Management and Station Monitoring in Version 0.2.8.0</h2>
+            <div class="blog-meta">
+                <div class="date">March 23, 2025</div>
+                <div class="tag">Update</div>
+            </div>
+          
+            <p>Version 0.2.8.0 introduces a variety of improvements to theme management and station organization:</p>
+            
+            <h3>Theme Enhancements</h3>
+            <ul>
+                <li><strong>Button Image Colors:</strong> Added theme designer buttons to set button image colors (white, black, grey)</li>
+                <li><strong>Color Value Sliders:</strong> Enhanced Theme Designer with intuitive sliders for precise color selection</li>
+                <li><strong>Default Theme Protection:</strong> Fixed theme selection when deleting the current theme - now reverts to the non-deletable Default theme</li>
+                <li><strong>Default Theme Creation:</strong> The application now creates a default theme file if none exists on first run</li>
+            </ul>
+            
+            <h3>Station Management</h3>
+            <ul>
+                <li><strong>Persistent Monitoring:</strong> Added checkbox to save monitored stations between sessions</li>
+                <li><strong>Themed Monitoring Panel:</strong> Updated Station Monitor and Radio Browser to follow current theme</li>
+                <li><strong>Station Name Editing:</strong> Added functionality to edit radio station names in favorites</li>
+                <li><strong>URL-Based Identification:</strong> Implemented URL-based favorite station identification for more reliable bookmarking</li>
+                <li><strong>Name Prompting:</strong> Added support for adding stations without a name, prompting user to enter one</li>
+            </ul>
+            
+            <h3>Performance Improvements</h3>
+            <ul>
+                <li><strong>Faster Radio Browser:</strong> Replaced laggy DataGridView with a more performant version</li>
+                <li><strong>Quicker Connections:</strong> Improved station connection time</li>
+                <li><strong>Clean Application Exit:</strong> Ensured all windows close properly when exiting the application</li>
+                <li><strong>Streaming Stability:</strong> Improved to prevent intermittent stream silences</li>
+            </ul>
+        </article>
+
+        <article id="post13" class="blog-post">
+            <h2>Radio Browser and UI Improvements in Version 0.2.7.0</h2>
+            <div class="blog-meta">
+                <div class="date">March 22, 2025</div>
+                <div class="tag">Feature</div>
+            </div>
+            
+            <p>Version 0.2.7.0 introduces our new integrated radio station browser and several UI improvements:</p>
+            
+            <h3>New Radio Browser</h3>
+            <p>We've implemented a comprehensive radio station browser with search functionality, replacing the previous websites panel button. This new browser allows you to:</p>
+            <ul>
+                <li>Search for stations by name, genre, or country</li>
+                <li>Browse popular stations in different categories</li>
+                <li>Add discovered stations directly to your favorites</li>
+            </ul>
+            
+            <h3>UI Enhancements</h3>
+            <ul>
+                <li><strong>Faster Connection Detection:</strong> Reduced timeout for connection failures from 15 to 8 seconds</li>
+                <li><strong>Themed Websites Panel:</strong> Redesigned the websites panel to follow application theme colors and update after applying theme changes</li>
+                <li><strong>Better Navigation:</strong> Added scrollbar functionality to websites panel for improved navigation with multiple stations</li>
+                <li><strong>Text Handling:</strong> Implemented URL text truncation to prevent overlap with control buttons</li>
+            </ul>
+            
+            <p>These improvements make discovering new stations easier while ensuring a consistent visual experience throughout the application.</p>
+        </article>
+
+        <article id="post14" class="blog-post">
+            <h2>Theme Import/Export in Version 0.2.6.0</h2>
+            <div class="blog-meta">
+                <div class="date">March 18, 2025</div>
+                <div class="tag">Feature</div>
+            </div>
+
+            <p>Version 0.2.6.0 introduces theme sharing capabilities:</p>
+            
+            <h3>Theme Export and Import</h3>
+            <ul>
+                <li><strong>Export Themes:</strong> You can now export all themes or a single selected theme to a location of your choice</li>
+                <li><strong>Import Themes:</strong> Added theme import functionality, with duplicate theme names automatically ignored</li>
+            </ul>
+            
+            <p>Version 0.2.6.1 also includes several important fixes:</p>
+            <ul>
+                <li>Fixed a bug in the theme designer where saved themes wouldn't persist properly</li>
+                <li>Removed requirement for elevated rights when running LB Player</li>
+                <li>Repositioned several UI elements for a more balanced interface</li>
+            </ul>
+            
+            <p>These features make it easy to share your custom themes with friends or transfer them between different installations of Live Beats WebRadio Player.</p>
+        </article>
+
+        <article id="post15" class="blog-post">
+            <h2>Theme Designer and Song Tracking in Version 0.2.5.0</h2>
+            <div class="blog-meta">
+                <div class="date">March 17, 2025</div>
+                <div class="tag">Feature</div>
+            </div>
+            
+            <p>Version 0.2.5.0 introduces two major features: a theme designer and enhanced song tracking:</p>
+            
+            <h3>Thumbs Up Button</h3>
+            <p>The new thumbs up button automatically copies the current song name and artist to a text file, allowing you to build a personal playlist of songs you discover through radio:</p>
+            <ul>
+                <li>Add as many songs as you like with a single click</li>
+                <li>If no text file exists, you'll be prompted to create one wherever you want</li>
+                <li>If the text file is moved, renamed or deleted, you can create a new one or find and merge with the old one</li>
+            </ul>
+            
+            <h3>Theme Designer</h3>
+            <p>Create your own visual themes with our new theme designer:</p>
+            <ul>
+                <li>Customize colors for all elements of the interface</li>
+                <li>Save multiple themes and switch between them</li>
+                <li>Preview changes in real-time</li>
+            </ul>
+            
+            <h3>Additional Improvements</h3>
+            <ul>
+                <li>Created a registration form (accessible via the settings panel)</li>
+                <li>Made station monitoring more stable and robust</li>
+                <li>Fixed a volume label display bug where decimal errors would appear when unmuting</li>
+            </ul>
+        </article>
+
+        <article id="post16" class="blog-post">
+            <h2>Multi-Station Monitoring in Version 0.2.4.0</h2>
+            <div class="blog-meta">
+                <div class="date">March 12, 2025</div>
+                <div class="tag">Feature</div>
+            </div>
+           
+            <p>Version 0.2.4.0 introduces a powerful new feature for radio enthusiasts: the ability to monitor multiple stations simultaneously without switching from your current listening station.</p>
+            
+            <h3>Multi-Station Monitoring</h3>
+            <p>This experimental feature allows you to:</p>
+            <ul>
+                <li>Monitor what's playing on up to 10 stations simultaneously without connecting to them</li>
+                <li>Each station is assigned a random fetching interval between 12-25 seconds</li>
+                <li>Quickly switch to any monitored station if you see something interesting playing</li>
+            </ul>
+            <p>This feature is perfect for keeping track of multiple genre-specific stations and switching when a favorite song or artist comes on.</p>
+            
+            <h3>Additional Improvements</h3>
+            <ul>
+                <li>Added a button for storing song titles to a text file</li>
+                <li>Completely revamped the About UI with a more modern and informative layout</li>
+                <li>Added resource-saving feature that closes the monitoring panel when sleep timer triggers</li>
+            </ul>
+        </article>
+
+        <article id="post17" class="blog-post">
+            <h2>Startup Options and GitHub Integration in Version 0.2.3.0</h2>
+            <div class="blog-meta">
+                <div class="date">March 10, 2025</div>
+                <div class="tag">Feature</div>
+            </div>
+            
+            <p>Version 0.2.3.0 focuses on enhancing the startup experience and adding various quality-of-life features:</p>
+            
+            <h3>Customizable Startup</h3>
+            <ul>
+                <li><strong>Random Favorite on Start:</strong> Added an option to automatically play a random station from your favorites when launching the player</li>
+                <li><strong>Last Station Memory:</strong> Added a setting to always play the most recently played station when starting the player</li>
+            </ul>
+            
+            <h3>Social and Information Features</h3>
+            <ul>
+                <li><strong>GitHub Integration:</strong> Added an icon linking to the project's GitHub page</li>
+                <li><strong>Issue Reporting:</strong> Clicking the bug icon now directs you to GitHub for issue reporting</li>
+                <li><strong>Song Info Copy:</strong> Added a button to copy artist & song name when available</li>
+                <li><strong>Supporter Option:</strong> Added "Buy Me a coffee" button for user appreciation and support</li>
+            </ul>
+            
+            <h3>Additional Improvements</h3>
+            <ul>
+                <li>Added a setting to hide data usage statistics</li>
+                <li>Added a button to delete all stored favorites</li>
+                <li>Added informative tooltips throughout the interface</li>
+            </ul>
+        </article>
+
+        <article id="post18" class="blog-post">
+            <h2>Playlist Export and UI Refinements in Version 0.2.2.0</h2>
+            <div class="blog-meta">
+                <div class="date">February 28, 2025</div>
+                <div class="tag">Update</div>
+            </div>
+            
+            <p>Version 0.2.2.0 introduces playlist export functionality and several user interface improvements:</p>
+            
+            <h3>Playlist Export</h3>
+            <p>You can now export any selected station to a standard .pls playlist file on your computer. This makes it easy to:</p>
+            <ul>
+                <li>Share your favorite stations with friends</li>
+                <li>Use your stations in other media players</li>
+                <li>Back up your station collection</li>
+            </ul>
+            
+            <h3>UI Enhancements</h3>
+            <ul>
+                <li><strong>Clearer Icons:</strong> Changed the bookmark icon to "+" for better clarity</li>
+                <li><strong>Status Messages:</strong> Added "Ready To play" status message when LB Player is first loaded</li>
+            </ul>
+            
+            <p>These improvements make it easier to use Live Beats WebRadio Player as part of your broader media consumption workflow.</p>
+        </article>
+
+        <article id="post19" class="blog-post">
+            <h2>Format Display and Bug Fixes in Version 0.2.1.3</h2>
+            <div class="blog-meta">
+                <div class="date">February 10, 2025</div>
+                <div class="tag">Bug Fix</div>
+            </div>
+            
+            <p>Version 0.2.1.3 focuses on fixing several display issues to improve the user experience:</p>
+            
+            <h3>Format Display Fixes</h3>
+            <ul>
+                <li>Fixed a bug where MP3 format would display as "audio/mpeg" instead of the more user-friendly "MP3"</li>
+                <li>Fixed redundant bitrate information that would show as "Bitrate: 128, 128 kbps" instead of simply "Bitrate: 128 kbps"</li>
+            </ul>
+            
+            <h3>Station Name Update</h3>
+            <p>Fixed a bug where the player wouldn't update the station name when using drag-and-drop playlist files or pasting URLs into the Stream URL textbox, ensuring you always know which station you're listening to.</p>
+            
+            <p>Version 0.2.1.0 (released February 5) also included significant performance improvements:</p>
+            <ul>
+                <li>Significantly reduced UI freezing when starting a station</li>
+                <li>Improved speed when changing and starting streams</li>
+                <li>Added more detailed stream error messages for better troubleshooting</li>
+            </ul>
+        </article>
+
+        <article id="post20" class="blog-post">
+            <h2>Foundational Features in Version 0.2.0.0</h2>
+            <div class="blog-meta">
+                <div class="date">February 2, 2025</div>
+                <div class="tag">Major Release</div>
+            </div>
+
+            <p>Version 0.2.0.0 establishes core functionality that makes Live Beats WebRadio Player a comprehensive streaming radio solution:</p>
+            
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Sleep Timer:</strong> Set the player to automatically stop after a specified duration (1-9999 minutes), perfect for falling asleep to your favorite station</li>
+                <li><strong>Data Usage Tracking:</strong> Estimate your bandwidth consumption based on stream bitrate, helpful for users with limited data plans</li>
+                <li><strong>Settings Panel:</strong> Added a dedicated section for application configuration</li>
+                <li><strong>About Information:</strong> Added an "About" button to display application version and information</li>
+                <li><strong>Audio Controls:</strong> Implemented mute and unmute functionality for quick audio management</li>
+                <li><strong>Visual Improvements:</strong> Various UI enhancements for better visual appeal and usability</li>
+            </ul>
+            
+            <p>This version establishes Live Beats WebRadio Player as a feature-rich application for internet radio enthusiasts, with a foundation that supports the numerous enhancements we've implemented since.</p>
+            
+            <p>We're committed to continuing development with regular updates that add new capabilities while maintaining the streamlined, user-friendly experience that makes Live Beats WebRadio Player special.</p>
+        </article>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img/icon.png" alt="Live Beats WebRadio Player Logo">
+                <h3>Live Beats WebRadio Player</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:livebeatswrp@gmail.com">livebeatswrp@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/LBWebRadio" target="_blank">github.com/LBWebRadio</a></p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Christian Flach. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body> </html>
